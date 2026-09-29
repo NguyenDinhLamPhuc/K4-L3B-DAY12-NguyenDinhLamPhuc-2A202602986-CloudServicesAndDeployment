@@ -10,17 +10,17 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Họ và tên | (điền họ tên) |
-| Mã học viên | (điền mã học viên) |
-| Repo | (điền link repo K4-L3B-DAY12-HoVaTen-MSSV-CloudServicesAndDeployment) |
+| Họ và tên | Nguyễn Đình Lâm Phúc |
+| Mã học viên | 2A202602986 |
+| Repo | https://github.com/NguyenDinhLamPhuc/K4-L3B-DAY12-NguyenDinhLamPhuc-2A202602986-CloudServicesAndDeployment |
 
 ## Service
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://TODO-thay-bang-url-that.up.railway.app |
-| Platform | Railway / Render / Cloud Run — (điền platform bạn dùng) |
-| Ngày deploy | (điền ngày) |
+| Public URL | https://day12-agent-7xwc.onrender.com |
+| Platform | Render |
+| Ngày deploy | 29/9/2026 |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
@@ -73,7 +73,73 @@ done; echo
 Dán output của các lệnh trên vào đây:
 
 ```
-(điền output)
+HTTP/1.1 200 OK
+Date: Tue, 29 Sep 2026 04:14:59 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cf-cache-status: DYNAMIC
+rndr-id: a1ba8738-43db-4100
+Server: cloudflare
+vary: Accept-Encoding
+x-render-origin-server: uvicorn
+CF-RAY: a4282a07ab6da1ac-SIN
+alt-svc: h3=":443"; ma=86400
+
+{"status":"ok","service":"day12-agent","version":"1.0.0"}HTTP/1.1 200 OK
+Date: Tue, 29 Sep 2026 04:15:00 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cf-cache-status: DYNAMIC
+rndr-id: 07b3203c-fa68-428d
+Server: cloudflare
+vary: Accept-Encoding
+x-render-origin-server: uvicorn
+CF-RAY: a4282a0aafe85fb1-SIN
+alt-svc: h3=":443"; ma=86400
+
+{"status":"ready","redis":true}HTTP/1.1 401 Unauthorized
+Date: Tue, 29 Sep 2026 04:15:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cf-cache-status: DYNAMIC
+rndr-id: 26f69e1f-7b91-4204
+Server: cloudflare
+vary: Accept-Encoding
+x-render-origin-server: uvicorn
+CF-RAY: a4282a0e2c6fd25b-SIN
+alt-svc: h3=":443"; ma=86400
+
+{"detail":"invalid or missing API key"}HTTP/1.1 200 OK
+Date: Tue, 29 Sep 2026 04:15:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cf-cache-status: DYNAMIC
+rndr-id: 9315fe35-4bc8-4a73
+Server: cloudflare
+vary: Accept-Encoding
+x-render-origin-server: uvicorn
+CF-RAY: a4282a10dd526bed-SIN
+alt-svc: h3=":443"; ma=86400
+
+{"answer":"Câu hỏi hay. Deploy là gì thường được giải quyết bằng cách chuẩn hóa môi trường chạy: cùng một image chạy giống nhau ở laptop và trên cloud.","user_id":"sv-test","history_length":0,"cost_usd":2.145e-05,"tokens":{"in":3,"out":35}}Lần 1: HTTP 200
+Lần 2: HTTP 200
+Lần 3: HTTP 200
+Lần 4: HTTP 200
+Lần 5: HTTP 200
+Lần 6: HTTP 200
+Lần 7: HTTP 200
+Lần 8: HTTP 200
+Lần 9: HTTP 200
+Lần 10: HTTP 200
+Lần 11: HTTP 429
+Lần 12: HTTP 429
+Lần 13: HTTP 429
+Lần 14: HTTP 429
+Lần 15: HTTP 429
 ```
 
 ## Ảnh Chụp Màn Hình
@@ -85,17 +151,3 @@ Dán output của các lệnh trên vào đây:
 
 ---
 
-## Nếu Dùng Phương Án Dự Phòng
-
-Không đăng ký được tài khoản cloud? Vẫn nộp được bài, nhưng CP5 tối đa 60% điểm:
-
-1. Đặt `LOCAL_FALLBACK=true` trong `.env`
-2. Chạy `docker compose up -d` rồi kiểm tra `docker compose ps`
-3. Chụp màn hình vào `screenshots/`
-4. Chạy `pytest tests/test_cp5.py -v` — bộ test sẽ tự chuyển sang kiểm tra
-   `http://localhost:8000`
-5. Ghi rõ lý do không deploy được vào phần dưới đây:
-
-```
-(điền lý do nếu dùng phương án dự phòng, ngược lại xóa mục này)
-```
